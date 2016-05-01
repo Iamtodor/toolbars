@@ -20,7 +20,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ExpandableToolbarActivity"/>
+        <activity
+            android:name=".ExpandableToolbarActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
