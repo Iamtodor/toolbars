@@ -23,6 +23,11 @@
         <activity
             android:name=".ExpandableToolbarActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".ParallaxToolbarActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
     </application>
 
 </manifest>

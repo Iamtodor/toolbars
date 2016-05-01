@@ -26,6 +26,8 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
         android:layout_gravity="center">
 
         <Button
@@ -33,6 +35,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/expandable_toolbar"/>
+
+        <Button
+            android:id="@+id/parallax_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:text="@string/parallax_toolbar"/>
 
     </LinearLayout>
 

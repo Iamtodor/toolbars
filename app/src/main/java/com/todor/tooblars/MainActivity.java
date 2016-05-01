@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
     @BindView(R.id.toolbar) protected Toolbar toolbar;
-    @BindView(R.id.expandable_toolbar) Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +25,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.expandable_toolbar)
-    public void expandableToolbarClick() {
+    public void expandableToolbar() {
         startActivity(new Intent(this, ExpandableToolbarActivity.class));
+    }
+
+    @OnClick(R.id.parallax_toolbar)
+    public void parallaxToolbar() {
+        startActivity(new Intent(this, ParallaxToolbarActivity.class));
     }
 
 }

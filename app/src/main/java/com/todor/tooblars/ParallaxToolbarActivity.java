@@ -1,6 +1,7 @@
 package com.todor.tooblars;
 
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -16,8 +17,9 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
-public class ExpandableToolbarActivity extends AppCompatActivity {
+public class ParallaxToolbarActivity extends AppCompatActivity {
 
     @BindView(R.id.recycler_view) protected RecyclerView recyclerView;
     @BindView(R.id.toolbar) protected Toolbar toolbar;
@@ -25,7 +27,7 @@ public class ExpandableToolbarActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.expandable_toolbar_activity);
+        setContentView(R.layout.parallax_toolbar_activity);
         ButterKnife.bind(this);
 
         setSupportActionBar(toolbar);
@@ -49,5 +51,10 @@ public class ExpandableToolbarActivity extends AppCompatActivity {
                 return true;
         }
         return false;
+    }
+
+    @OnClick(R.id.fab)
+    public void fab() {
+        Snackbar.make(recyclerView, "Here's a Snackbar", Snackbar.LENGTH_SHORT).show();
     }
 }
