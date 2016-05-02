@@ -34,4 +34,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, ParallaxToolbarActivity.class));
     }
 
+    @OnClick(R.id.hide_toolbar)
+    public void hideToolbar() {
+        startActivity(new Intent(this, HideToolbar.class));
+    }
+
 }

@@ -28,6 +28,10 @@
             android:name=".ParallaxToolbarActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
 
+        <activity
+            android:name=".HideToolbar"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
     </application>
 
 </manifest>

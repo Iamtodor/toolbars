@@ -24,24 +24,33 @@
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="match_parent"
+        android:layout_gravity="center"
         android:layout_marginTop="16dp"
-        android:orientation="vertical"
-        android:layout_gravity="center">
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/expandable_toolbar"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/expandable_toolbar"/>
 
         <Button
             android:id="@+id/parallax_toolbar"
-            android:layout_width="wrap_content"
-            android:layout_gravity="center"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
             android:text="@string/parallax_toolbar"/>
+
+        <Button
+            android:id="@+id/hide_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:text="@string/hide_toolbar"/>
 
     </LinearLayout>
 
