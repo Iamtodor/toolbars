@@ -1,25 +1,29 @@
-package com.todor.tooblars;
+package com.todor.toolbars.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.widget.Button;
+
+import com.todor.tooblars.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
     @BindView(R.id.toolbar) protected Toolbar toolbar;
 
     @Override
+    public int getContentViewId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
 
         setSupportActionBar(toolbar);
     }
@@ -36,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.hide_toolbar)
     public void hideToolbar() {
-        startActivity(new Intent(this, HideToolbar.class));
+        startActivity(new Intent(this, HideToolbarActivity.class));
     }
 
 }

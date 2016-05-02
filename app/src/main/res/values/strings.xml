@@ -4,4 +4,5 @@
     <string name="expandable_toolbar">Expandable toolbar</string>
     <string name="parallax_toolbar">Parallax toolbar</string>
     <string name="hide_toolbar">HIde toolbar</string>
+    <string name="snackbar_message">Here\'s a Snackbar</string>
 </resources>
