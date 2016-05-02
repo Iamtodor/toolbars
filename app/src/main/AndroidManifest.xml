@@ -11,8 +11,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -21,16 +20,13 @@
         </activity>
 
         <activity
-            android:name=".ExpandableToolbarActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:name=".ExpandableToolbarActivity"/>
 
         <activity
-            android:name=".ParallaxToolbarActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:name=".ParallaxToolbarActivity"/>
 
         <activity
-            android:name=".HideToolbar"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:name=".HideToolbar"/>
 
     </application>
 
