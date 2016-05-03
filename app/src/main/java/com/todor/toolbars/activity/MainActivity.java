@@ -43,4 +43,9 @@ public class MainActivity extends BaseActivity {
         startActivity(new Intent(this, HideToolbarActivity.class));
     }
 
+    @OnClick(R.id.toolbar_with_tablayout)
+    public void toolbarWithTabLayout() {
+        startActivity(new Intent(this, ToolbarWithTabLayoutActivity.class));
+    }
+
 }

@@ -28,6 +28,9 @@
         <activity
             android:name="com.todor.toolbars.activity.HideToolbarActivity"/>
 
+        <activity
+            android:name="com.todor.toolbars.activity.ToolbarWithTabLayoutActivity"/>
+
     </application>
 
 </manifest>
