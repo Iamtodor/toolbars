@@ -8,8 +8,8 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import com.todor.tooblars.Utils;
-import com.todor.tooblars.adapter.RecyclerViewAdapter;
+import com.todor.toolbars.Utils;
+import com.todor.toolbars.adapter.RecyclerViewAdapter;
 
 import butterknife.ButterKnife;
 

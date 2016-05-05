@@ -1,13 +1,14 @@
-package com.todor.tooblars;
+package com.todor.toolbars;
 
-import com.todor.tooblars.model.Item;
+import com.todor.toolbars.model.Item;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public final class Utils {
 
-    public Utils() {}
+    public Utils() {
+    }
 
     public static List<Item> getItems() {
         List<Item> items = new ArrayList<>();

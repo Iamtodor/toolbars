@@ -1,4 +1,4 @@
-package com.todor.tooblars.adapter;
+package com.todor.toolbars.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.todor.tooblars.R;
-import com.todor.tooblars.model.Item;
+import com.todor.toolbars.model.Item;
 
 import java.util.List;
 

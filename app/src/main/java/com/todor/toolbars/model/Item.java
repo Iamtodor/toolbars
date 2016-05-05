@@ -1,4 +1,4 @@
-package com.todor.tooblars.model;
+package com.todor.toolbars.model;
 
 public class Item {
 
