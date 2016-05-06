@@ -10,8 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.todor.tooblars.R;
-import com.todor.tooblars.Utils;
-import com.todor.tooblars.adapter.RecyclerViewAdapter;
+import com.todor.toolbars.Utils;
+import com.todor.toolbars.adapter.RecyclerViewAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
