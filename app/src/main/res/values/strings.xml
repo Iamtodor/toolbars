@@ -15,4 +15,6 @@
     <string name="inbox_notification">Inbox</string>
     <string name="messaging_notification">Messaging</string>
     <string name="media_notification">Media</string>
+    <string name="notification_title">Awesome notification\'s title!</string>
+    <string name="notification_content">Cool content</string>
 </resources>

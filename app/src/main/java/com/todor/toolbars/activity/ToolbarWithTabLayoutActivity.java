@@ -6,6 +6,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
 
 import com.todor.tooblars.R;
+import com.todor.toolbars.fragment.ViewPagerFragment;
 import com.todor.toolbars.adapter.ViewPagerAdapter;
 
 import butterknife.BindView;
@@ -32,9 +33,9 @@ public class ToolbarWithTabLayoutActivity extends BaseActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new MyFragment(), "Category 1");
-        adapter.addFragment(new MyFragment(), "Category 2");
-        adapter.addFragment(new MyFragment(), "Category 3");
+        adapter.addFragment(new ViewPagerFragment(), "Category 1");
+        adapter.addFragment(new ViewPagerFragment(), "Category 2");
+        adapter.addFragment(new ViewPagerFragment(), "Category 3");
         viewPager.setAdapter(adapter);
     }
 }

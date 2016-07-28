@@ -48,7 +48,7 @@ public class MainActivity extends BaseActivity {
         }
     }
 
-    public int getStatusBarHeight() {
+    private int getStatusBarHeight() {
         int result = 0;
         int resourceId = getResources().getIdentifier("status_bar_height", "dimen", "android");
         if (resourceId > 0) {
@@ -79,7 +79,7 @@ public class MainActivity extends BaseActivity {
 
     @OnClick(R.id.notification)
     public void notification() {
-        startActivity(new Intent(this, Notifications.class));
+        startActivity(new Intent(this, NotificationsActivity.class));
     }
 
 }
