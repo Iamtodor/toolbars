@@ -3,22 +3,18 @@ package com.todor.toolbars.activity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.LinearLayout;
 
 import com.todor.tooblars.R;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity {
 
-    private static final String TAG = MainActivity.class.getSimpleName();
     @BindView(R.id.toolbar) protected Toolbar toolbar;
 
     @Override
@@ -79,6 +75,11 @@ public class MainActivity extends BaseActivity {
     @OnClick(R.id.toolbar_with_tablayout)
     public void toolbarWithTabLayout() {
         startActivity(new Intent(this, ToolbarWithTabLayoutActivity.class));
+    }
+
+    @OnClick(R.id.notification)
+    public void notification() {
+        startActivity(new Intent(this, Notifications.class));
     }
 
 }

@@ -31,6 +31,8 @@
         <activity
             android:name="com.todor.toolbars.activity.ToolbarWithTabLayoutActivity"/>
 
+        <activity android:name="com.todor.toolbars.activity.Notifications"/>
+
     </application>
 
 </manifest>

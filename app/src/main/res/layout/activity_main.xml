@@ -22,44 +22,38 @@
     </android.support.design.widget.AppBarLayout>
 
     <LinearLayout
+        android:id="@+id/bellow_actionbar"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="250dp"
-        android:id="@+id/bellow_actionbar"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:layout_marginTop="16dp"
         android:orientation="vertical">
 
         <Button
             android:id="@+id/expandable_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/ButtonStyle"
             android:text="@string/expandable_toolbar"/>
 
         <Button
             android:id="@+id/parallax_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="16dp"
+            style="@style/ButtonStyle"
             android:text="@string/parallax_toolbar"/>
 
         <Button
             android:id="@+id/hide_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="16dp"
+            style="@style/ButtonStyle"
             android:text="@string/hide_toolbar"/>
 
         <Button
             android:id="@+id/toolbar_with_tablayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="16dp"
+            style="@style/ButtonStyle"
             android:text="@string/toolbar_with_tablayout"/>
+
+        <Button
+            android:id="@+id/notification"
+            style="@style/ButtonStyle"
+            android:text="@string/notifications"/>
 
     </LinearLayout>
 

@@ -6,4 +6,13 @@
     <string name="hide_toolbar">Hide toolbar</string>
     <string name="snackbar_message">Here\'s a Snackbar</string>
     <string name="toolbar_with_tablayout">Toolbar with TabLayout</string>
+    <string name="notifications">Notifications</string>
+    <string name="endless_notification">Endless</string>
+    <string name="simple_notification">Simple</string>
+    <string name="rich_notification">Rich</string>
+    <string name="big_text_notification">Big text</string>
+    <string name="big_picture_notification">Big picture</string>
+    <string name="inbox_notification">Inbox</string>
+    <string name="messaging_notification">Messaging</string>
+    <string name="media_notification">Media</string>
 </resources>
