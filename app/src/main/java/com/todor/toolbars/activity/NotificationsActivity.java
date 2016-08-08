@@ -78,4 +78,67 @@ public class NotificationsActivity extends BaseActivity {
 
         mNotificationManager.notify(3, mNotification.build());
     }
+
+    @OnClick(R.id.indeterminate_notification)
+    public void indeterminateNotification() {
+        mNotification = new Notification.Builder(this)
+                .setSmallIcon(R.drawable.notification_small_icon)
+                .setContentTitle("Picture Download")
+                .setContentText("Download in progress");
+
+        if (Build.VERSION.SDK_INT >= 21) {
+            mNotification.setColor(ContextCompat.getColor(this, android.R.color.holo_red_light));
+        }
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                mNotification.setProgress(0, 0, true);
+                mNotificationManager.notify(4, mNotification.build());
+
+                try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                mNotification.setContentText("Download complete")
+                        .setProgress(0, 0, false);
+                mNotificationManager.notify(4, mNotification.build());
+            }
+        }).start();
+
+    }
+
+    @OnClick(R.id.determinate_notification)
+    public void determinateNotification() {
+        mNotification = new Notification.Builder(this)
+                .setSmallIcon(R.drawable.notification_small_icon)
+                .setContentTitle("Picture Download")
+                .setContentText("Download in progress");
+
+        if (Build.VERSION.SDK_INT >= 21) {
+            mNotification.setColor(ContextCompat.getColor(this, android.R.color.holo_red_light));
+        }
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                for (int progress = 0; progress <= 100; progress += 10) {
+                    mNotification.setProgress(100, progress, false);
+                    mNotificationManager.notify(4, mNotification.build());
+
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                mNotification.setContentText("Download complete")
+                        .setProgress(0, 0, false);
+                mNotificationManager.notify(4, mNotification.build());
+            }
+        }).start();
+
+    }
+
 }

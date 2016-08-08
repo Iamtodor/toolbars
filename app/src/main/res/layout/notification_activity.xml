@@ -53,9 +53,14 @@
             android:text="@string/messaging_notification"/>
 
         <Button
-            android:id="@+id/media_notification"
+            android:id="@+id/indeterminate_notification"
             style="@style/ButtonStyle"
-            android:text="@string/media_notification"/>
+            android:text="@string/indeterminate_notification"/>
+
+        <Button
+            android:id="@+id/determinate_notification"
+            style="@style/ButtonStyle"
+            android:text="@string/determinate_notification"/>
 
     </LinearLayout>
 
