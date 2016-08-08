@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.Toolbar;
 
@@ -79,16 +80,35 @@ public class NotificationsActivity extends BaseActivity {
         mNotificationManager.notify(3, mNotification.build());
     }
 
+    @OnClick(R.id.inbox_notification)
+    public void inboxNotification() {
+        mNotification = new Notification.Builder(this)
+                .setSmallIcon(R.drawable.notification_small_icon)
+                .setContentTitle("5 new mails")
+                .setContentText("Content text")
+                .setSubText("Sub text")
+                .setStyle(new Notification.InboxStyle()
+                        .addLine("Mail 1")
+                        .addLine("Mail 2")
+                        .addLine("Mail 3")
+                        .addLine("Mail 4")
+                        .addLine("Mail 5")
+                        .setSummaryText("+2 more"));
+
+
+        if (Build.VERSION.SDK_INT >= 21) {
+            mNotification.setColor(ContextCompat.getColor(this, android.R.color.holo_red_light));
+        }
+
+        mNotificationManager.notify(4, mNotification.build());
+    }
+
     @OnClick(R.id.indeterminate_notification)
     public void indeterminateNotification() {
         mNotification = new Notification.Builder(this)
                 .setSmallIcon(R.drawable.notification_small_icon)
                 .setContentTitle("Picture Download")
                 .setContentText("Download in progress");
-
-        if (Build.VERSION.SDK_INT >= 21) {
-            mNotification.setColor(ContextCompat.getColor(this, android.R.color.holo_red_light));
-        }
 
         new Thread(new Runnable() {
             @Override
@@ -138,6 +158,29 @@ public class NotificationsActivity extends BaseActivity {
                 mNotificationManager.notify(4, mNotification.build());
             }
         }).start();
+
+    }
+
+    @OnClick(R.id.messaging_notification)
+    public void messageNotification() {
+        if (Build.VERSION.SDK_INT >= 24) {
+            mNotification = new Notification.Builder(this)
+                    .setSmallIcon(R.drawable.notification_small_icon)
+                    .setContentTitle("5 new mails")
+                    .setContentText("Content text")
+                    .setSubText("Sub text")
+                    .setStyle(new Notification.MessagingStyle("Me")
+                            .setConversationTitle("Share food")
+                            .addMessage("Message 1", 1000L, "Companion 1")
+                            .addMessage("Message 2", 1000L, "Companion 2")
+                            .addMessage("Message 3", 1000L, "Companion 3")
+                            .addMessage("Message 4", 1000L, "Companion 4")
+                            .addMessage("Message 5", 1000L, "Companion 5"))
+                    .setColor(ContextCompat.getColor(this, android.R.color.holo_red_light));
+            mNotificationManager.notify(5, mNotification.build());
+        } else {
+            Snackbar.make(mToolbar, "Api 24 is required", Snackbar.LENGTH_SHORT).show();
+        }
 
     }
 
